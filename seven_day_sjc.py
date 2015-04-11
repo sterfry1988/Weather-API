@@ -1,6 +1,6 @@
+import datetime
 import json
 import requests
-import datetime
 
 # In your own scripting language of choice, create a solution for the following questions. Your code should be well commented. Final solution should include: the approach, your script, and the output results.
 
