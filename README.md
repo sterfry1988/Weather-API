@@ -9,6 +9,8 @@ The language chosen for this script was to use Python. Python is an easy to read
 
 ### Implementation
 
-The requests library was used for creating a connection to the remote api and returning the request. The request will have a json property that will allow the programmer to extract information in a standard way. This will also make reading and writing the request to a file easy in combination with the json library. 
+The urllib2 library was used for creating a connection to the remote api and returning the request. The request will be converted to json which will allow the programmer to extract information in a standard way. This will also make reading and writing the request to a file easy.
 
-In order to save time on repeated calls and API quota the requests will be saved to disk. This allows for faster execution of the script in the event that the requests have been made already. Assuming this script was to be ran every day it would only require 1 new API call to be made per day. 
+In order to save time on repeated calls and API quota the requests will be saved to disk. This allows for faster execution of the script in the event that the requests have been made already. Assuming this script was to be ran every day it would only require 1 new API call to be made per day for the past week's temperature. Because the requests in the interactive script are testing realtime information there is a variable in common.py that will set a threshold, and a flag in checkCache_ to determine whether or not the API should be called. 
+
+
