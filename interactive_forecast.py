@@ -1,6 +1,5 @@
 import common
 import datetime
-import json
 import logging
 # In your own scripting language of choice, create a solution for the following questions. Your code should be well commented. Final solution should include: the approach, your script, and the output results.
 
@@ -10,7 +9,7 @@ import logging
 def main():
   zip_code = setZipcode()
   while(True):    
-    option = raw_input('Please select one of the following \n 1) Current temperature \n 2) Forecast over the next 3 days \n 3) Is it a good day? \n 4) Reset Zipcode \n 5) Exit \n Enter your choice: ')
+    option = raw_input('Please select one of the following: \n 1) Current temperature. \n 2) Forecast over the next 3 days. \n 3) Is it a good day? \n 4) Reset Zipcode. \n 5) Exit \n Enter your choice: ')
 
     if option == '1':
       currentTemp(zip_code)
@@ -87,7 +86,7 @@ def parseAndPrintGoodDay_(request_json):
             r_base[x]['FCTTIME']['pretty'])
  
 
- """Parses and prints the forecast for the next 3 days.""" 
+"""Parses and prints the forecast for the next 3 days.""" 
 def parseAndPrintForecast_(request_json):
   try:
     r_base = request_json['forecast']['simpleforecast']['forecastday']
