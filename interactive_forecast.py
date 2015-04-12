@@ -1,9 +1,6 @@
 import common
 import datetime
 import logging
-# In your own scripting language of choice, create a solution for the following questions. Your code should be well commented. Final solution should include: the approach, your script, and the output results.
-
-# Write a script that takes user input for a zip code and can show any of the user-selected following features - current temperature, forecast over the next 3 days, and whether or not today is a good day to get out of the house (assume sunny at an ambient 68F, no higher, between 9am-9pm).
 
 
 def main():

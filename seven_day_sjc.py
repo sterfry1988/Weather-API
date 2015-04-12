@@ -1,13 +1,8 @@
 import datetime
 import common
 
-# In your own scripting language of choice, create a solution for the following questions. Your code should be well commented. Final solution should include: the approach, your script, and the output results.
 
-# Write a script that gets historical average (or mean) temperature of San Jose, California over the past seven days.
-# Write a script that takes user input for a zip code and can show any of the user-selected following features - current temperature, forecast over the next 3 days, and whether or not today is a good day to get out of the house (assume sunny at an ambient 68F, no higher, between 9am-9pm).
-
-
-"""Makes requests for the average temperature for the last seven days. Will then average the average temperatures and print them to the console."""
+"""Makes requests for the average temperature for the last seven days for San Jose. Will then average the average temperatures and print them to the console."""
 def main():
   today = datetime.date.today()
   temperatures = {}
