@@ -2,11 +2,11 @@ import common
 import datetime
 import logging
 
-
+"""Entry point for the script. Loops forever until script is exited."""
 def main():
   zip_code = setZipcode()
   while(True):    
-    option = raw_input('Please select one of the following: \n 1) Current temperature. \n 2) Forecast over the next 3 days. \n 3) Is it a good day? \n 4) Reset Zipcode. \n 5) Exit \n Enter your choice: ')
+    option = raw_input('Please select one of the following: \n 1) Current temperature. \n 2) Forecast over the next 3 days. \n 3) Is it a good day? \n 4) Reset ZIP code. \n 5) Exit \n Enter your choice: ')
 
     if option == '1':
       currentTemp(zip_code)
@@ -17,15 +17,16 @@ def main():
     elif option == '4':
       zip_code = setZipcode()
     elif option == '5':
+      # Exit the script.
       exit()
     else:
       print 'Please select a valid option from the choices'
 
-
+"""Sets the zipcode to use with all the various requests."""
 def setZipcode():
-  return raw_input('Please enter the Zipcode of the forecast you would like to see: ')
+  return raw_input('Please enter the ZIP code of the forecast you would like to see: ')
 
-
+"""Gets the current temperature from the provided ZIP code. Checks cache first before making a request to the API."""
 def currentTemp(zip_code):
   request = common.checkCache(zip_code, True)
   if request:
@@ -37,7 +38,7 @@ def currentTemp(zip_code):
   print 'current temperature for %s is %s' % (zip_code, current_temp)
 
 
-"""Prints the next 3 day forecast based off provided zip code."""
+"""Prints the next 3 day forecast based off provided ZIP code."""
 def three_day_forecast(zip_code):
   request = common.checkCache(zip_code + 'forecast')
   if request:
@@ -71,7 +72,7 @@ def parseAndPrintGoodDay_(request_json):
     try:
       r_base = request_json['hourly_forecast']
     except KeyError as details:
-      logging.error('Unable to parse JSON check zipcode %s' % details)
+      logging.error('Unable to parse JSON check ZIP code %s' % details)
     else: 
      for x in range(21 - now.hour):
       if (r_base[x]['wx'] == 'Sunny' and 

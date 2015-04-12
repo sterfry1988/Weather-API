@@ -9,10 +9,10 @@ in your terminal and the script will return the average mean temperature from th
 <pre><code>python interactive_forecast.py</code></pre>
 You will then be prompted to enter a zipcode. Once you enter a zipcode the script will then give you 5 options:
 <pre><code>Please select one of the following: 
- 1) Current temperature 
- 2) Forecast over the next 3 days 
+ 1) Current temperature. 
+ 2) Forecast over the next 3 days. 
  3) Is it a good day? 
- 4) Reset Zipcode 
+ 4) Reset ZIP code. 
  5) Exit 
  Enter your choice: </code></pre>
 Each option will execute the following behavior:
