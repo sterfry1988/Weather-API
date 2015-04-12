@@ -15,6 +15,7 @@ CURRENT_CONDITIONS = API_URL + API_KEY + '/conditions/q/%s.json'
 GOOD_DAY = API_URL + API_KEY + '/hourly/q/%s.json'
 FORECAST = API_URL + API_KEY + '/forecast/q/%s.json'
 
+
 """urllib2 wrapper to help handle all requests."""
 def request_helper(url, param):
   try:
