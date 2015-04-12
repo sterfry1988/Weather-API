@@ -2,7 +2,8 @@
 These are scripts that will compute and print the average temperature for the last seven days for San Jose, CA, and provide an interactive interface for a user to obtain weather information by zipcode. 
 
 ## Usage
-In order to use the seven_day_sjc script you must have python version 2.7 installed. To call the script you may type: 
+In order to use the seven_day_sjc and interactive_forecast script you must have python version 2.7 installed. 
+To call the seven_day_sjc script you may type: 
 <pre><code>python seven_day_sjc.py</code></pre>
 in your terminal and the script will return the average mean temperature from the past 7 days. To use the interactive_forecast you may invoke the script by typing:
 <pre><code>python interactive_forecast.py</code></pre>
@@ -15,6 +16,7 @@ You will then be prompted to enter a zipcode. Once you enter a zipcode the scrip
  5) Exit 
  Enter your choice: </code></pre>
 Each option will execute the following behavior:
+
 1.  Prints the current temperature for the zipcode. 
 2.  Prints the forecast for the next 3 days. 
 3.  Prints the hours that will have nice weather and will not. 
