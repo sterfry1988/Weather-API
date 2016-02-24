@@ -4,7 +4,7 @@ import logging
 import os
 import urllib2 
 # API key used for http://api.wunderground.com
-API_KEY = '98218564ac42bf29'
+API_KEY = 'your key here'
 API_URL = 'http://api.wunderground.com/api/'
 CACHE_AGE = 3 * 60 * 60 # 3 hours in seconds
 # URL to request the historical temperatures for San Jose. Note that only 30 days in the past can be retrieved. 
